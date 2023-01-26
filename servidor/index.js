@@ -4,7 +4,7 @@ const empleados = require('./routes/empleados.route.js')
 const app = express()
 
 
-app.use('/empleados', empleados)
+app.use('/api', empleados)
 
 
 const PORT = 5000

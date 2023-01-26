@@ -1,19 +1,15 @@
-const mysql = require('mysql')
+const mysql = require('mysql');
+let conn;
 
-const conn = mysql.createConnection({
-    host: "172.20.1.220",
-    database: "rrhh",
-    user: "root",
-    password: "prueba1234",
-})
+try {
+    conn = mysql.createConnection({
+        host: "172.20.1.220",
+        database: "rrhh",
+        user: "root",
+        password: "prueba1234",
+    });
+} catch (error) {
+    console.log("Error al conectar con la base de datos");
+}
 
-conn.connect((error)=>{
-    if(error){
-        throw error;
-    }else {
-        console.log("db connect RRHH")
-    }
-})
-
-
-module.exports = conn
+module.exports = conn;
