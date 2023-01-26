@@ -3,7 +3,7 @@ const conn =  require('./database/config.js')
 const empleados = require('./routes/empleados.route.js')
 const app = express()
 
-
+app.use(express.json());
 app.use('/empleados', empleados)
 
 
