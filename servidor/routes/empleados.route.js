@@ -1,5 +1,6 @@
 const express = require('express')
 const route = express.Router()
+const {body, validationResult} = require("express-validator")
 
 const postEmpleados = require ('../controllers/empleados.controllers.js')
 
@@ -13,18 +14,27 @@ const nuevosDatos = {
     actividad: '',
     elementos: ''
 }
-//const empleados = []
-
 
 route.get('/', (req, res)=> {
     res.json({ok: "RRHH" })
 })
 
-// app.use(express.json()); // para interpretar el req.body en el metodo post
+route.post("/nuevo",
+[
+    body('nombre')
+        .exists()
+        .isLength({min: 5}),
+    
+    body("apellido")
+        .exists()
+        .isLength({min: 5}),
 
-route.post("/nuevo", postEmpleados)
-
-
+    body("dni")
+        .exists()
+        .toInt()
+        
+],
+ postEmpleados)
 
 
 module.exports = route

@@ -1,15 +1,18 @@
 
+import {RouterPrincipal} from "./routers/RouterPrincipal.js"
+
+
 function App() {
   return (
     <div>
-      Hello betech
+      
 
        {/* Header */}
-
+        
        {/* Nav */}
 
        {/* Article */}
-
+        <RouterPrincipal/>
        {/* Footer */}
 
     </div>
