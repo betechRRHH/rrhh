@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 const url = 'http://localhost:5000/empleados/nuevo'
 
 export const Formulario = () => {
@@ -35,8 +36,16 @@ export const Formulario = () => {
 
   return (
     <div className="container ">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><Link to='/'>Home</Link></li>
+                <li class="breadcrumb-item"><Link to="/empleados">Empleados</Link></li>
+                <li class="breadcrumb-item active" aria-current="page">Nuevo</li>
+            </ol>
+        </nav>
         <div className="row g-3">
-            <div className=" form-control text-center">INGRESE LOS DATOS DEL NUEVO EMPLEADO:</div>
+            <h4 className="text-center">INGRESE LOS DATOS DEL NUEVO EMPLEADO:</h4>
         </div>
         <form className="row g-3" onSubmit={ handleSubmit }>
 
