@@ -74,7 +74,7 @@ route.post("/nuevo",
         .isDate()
         .withMessage('Debes ingresar una fecha valida'),
 
-    body('fechaAlta')
+    body('fechaIngreso')
         .exists()
         .trim()
         .isDate(),

@@ -13,7 +13,7 @@ export const Formulario = () => {
      const[dni, setDni] = useState('')
      const[fechaNacimiento, setFechaNac] = useState('')
      const[lugarNacimiento, setLugarNac] = useState('')
-     const[fechaAlta, setfechaAlta] = useState('')
+     const[fechaIngreso, setfechaIngreso] = useState('')
      const[rol, setRol] = useState('')
      const[elementos, setElementos] = useState('')
      
@@ -24,7 +24,7 @@ export const Formulario = () => {
             const resp = await axios.post(url, {
                 nombre: nombre, apellido: apellido, domicilioReal: domicilioReal, 
                 domicilioLegal: domicilioLegal, ciudad: ciudad, cp: cp, dni: dni, fechaNacimiento: fechaNacimiento, 
-                lugarNacimiento: lugarNacimiento, fechaAlta: fechaAlta, rol: rol, elementos: elementos
+                lugarNacimiento: lugarNacimiento, fechaIngreso: fechaIngreso, rol: rol, elementos: elementos
             })
             console.log(resp.data) // Devuelve 'created' por consola si todo esta ok
         } catch (error) {
@@ -36,7 +36,7 @@ export const Formulario = () => {
   return (
     <div className="container ">
         <div className="row g-3">
-            <text className=" form-control text-center">INGRESE LOS DATOS DEL NUEVO EMPLEADO:</text>
+            <div className=" form-control text-center">INGRESE LOS DATOS DEL NUEVO EMPLEADO:</div>
         </div>
         <form className="row g-3" onSubmit={ handleSubmit }>
 
@@ -95,9 +95,9 @@ export const Formulario = () => {
             </div>
 
             <div className="col-4">
-                <label for="fechaDeAlta" className="form-label">Fecha de alta</label>
-                <input type="date" className="form-control" id="fechaDeAlta" placeholder="Ingresar fecha de alta"
-                value={fechaAlta} onChange={(e) => setfechaAlta(e.target.value)}/>
+                <label for="fechaDeIngreso" className="form-label">Fecha de ingreso</label>
+                <input type="date" className="form-control" id="fechaDeIngreso" placeholder="Ingresar fecha de ingreso"
+                value={fechaIngreso} onChange={(e) => setfechaIngreso(e.target.value)}/>
             </div>
 
             <div className="col-4">
@@ -112,6 +112,7 @@ export const Formulario = () => {
                     <option value="Software Engineer">Software Engineer</option>
                     <option value="AnalistaFuncional">Analista Funcional</option>
                     <option value="UxUiDesigner">Ux/Ui Designer</option>
+                    <option value="Designer">Designer</option>
 
                 </select>
             </div>
