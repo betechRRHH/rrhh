@@ -1,13 +1,6 @@
 const { validationResult } = require('express-validator');
 const conn =  require('../database/config.js')
 
-/*
-[
-    body('nya', 'Ingrese nombre completo')
-        .exists()
-        .isLength({min: 5})
-]*/
-
 const postEmpleados = (req, res) => {
     const {nombre, apellido, domicilioReal, domicilioLegal, ciudad, cp, dni, fechaNacimiento, lugarNacimiento, fechaIngreso, 
         rol, elementos, email, telefono} = req.body
@@ -20,13 +13,8 @@ const postEmpleados = (req, res) => {
         if(error)
             throw error;
         res.status(201).json({"Item añadido correctamente": results.affectedRows});
-   /* const errors = validationResult(req);
-        if(!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() });
-        } */
-    });
-  
 
+    });
 }
 
 module.exports = postEmpleados

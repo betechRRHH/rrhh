@@ -3,7 +3,8 @@ const route = express.Router()
 const {body, validationResult} = require("express-validator")
 
 
-const postEmpleados = require ('../controllers/empleados.controllers.js')
+const postEmpleados = require ('../controllers/empleadosPost.controllers.js')
+const getEmpleados = require ('../controllers/empleadosGet.controllers.js')
 
 const nuevosDatos = {
     nombre: '',
@@ -16,9 +17,9 @@ const nuevosDatos = {
     elementos: ''
 }
 
-route.get('/', (req, res)=> {
-    res.json({ok: "RRHH" })
-})
+
+route.get('/:dni', getEmpleados)
+
 
 route.post("/nuevo",
 [
