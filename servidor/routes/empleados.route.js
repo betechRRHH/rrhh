@@ -4,8 +4,6 @@ const {body, validationResult} = require("express-validator")
 
 
 const postEmpleados = require ('../controllers/empleadosPost.controllers.js')
-const getEmpleados = require ('../controllers/empleadosGet.controllers.js')
-const getEmpleado = require  ('../controllers/empleadoGetDni.controllers.js')
 
 /*const nuevosDatos = {
     nombre: '',
@@ -18,10 +16,6 @@ const getEmpleado = require  ('../controllers/empleadoGetDni.controllers.js')
     elementos: ''
 }
 */
-
-route.get('/', getEmpleados)
-
-// route.get('/:id', getEmpleado)
 
 
 route.post("/nuevo",
