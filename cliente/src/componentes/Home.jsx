@@ -9,6 +9,7 @@ export const Home = () => {
 
         <div className='text-center'>
             <h1 className='text-center mb-3'>Bienvenido a la app BE TECH</h1>
+            <h4  className='text-center mb-3'>Que actividades tienes para hoy?</h4>
             
             
         </div>

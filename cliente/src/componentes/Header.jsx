@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 let hoyDia = new Date();
 let dia = hoyDia.getDate()
-let mes = hoyDia.getMonth()
+let mes = hoyDia.getMonth()+1
 let año = hoyDia.getFullYear()
 
 if(dia < 10) { dia = '0' + dia; }
