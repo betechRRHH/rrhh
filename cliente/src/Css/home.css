@@ -1,0 +1,19 @@
+.contenedor__home{
+    
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    margin-top: 28px;
+    width: 100%;
+    height: 79vh;
+}
+
+.contenedor__sidebar{
+    width: 16%;
+}
+
+.contenedor__empleados{
+    padding-left: 20px;
+    
+    width: 100%;
+    border-left:2px solid rgba(0, 0, 0, 0.209) ;
+}

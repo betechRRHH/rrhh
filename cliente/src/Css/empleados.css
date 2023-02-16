@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Poppins:wght@400;500;600&family=Raleway:wght@300;400;500&family=Ubuntu:wght@300;400&display=swap');
+.empelados{
+    font-family: 'Maven Pro', sans-serif;
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll
+}
+.empelados::-webkit-scrollbar{
+    width: 3px;
+}
+.empelados::-webkit-scrollbar-thumb{
+    background:  #42c4ef7a ;
+}
+
+h1{
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 32px;
+}
+.empleado__table{
+    padding: 10px;
+    margin-top: 10px;
+}
+.contenedor_boton{
+    height: 100%;
+}
+.empleados__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+
+.boton{
+    background-color: rgba(240, 255, 255, 0);
+    height: 100%;
+    width: 150px;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+h1{
+    padding-top: 5px;
+}
+.boton:hover{
+    background-color:#42c4ef69;
+    transition: 0.5s;
+}
+
+.boton__atras{
+    height: 100%;
+}
+.boton__siguiente{
+    
+    height: 100%;
+}
+
+.separador{
+    border:  1px solid black;
+}
+
+.siguiente{
+    font-size: 100px;
+}
+
+.atras{
+    font-size: 38px;
+}
